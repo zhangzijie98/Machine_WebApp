@@ -7,7 +7,7 @@ import pymysql
 from sqlalchemy import create_engine
 #import asyncio
 
-engine = create_engine('mysql+pymysql://root:zhang1988@10.130.210.142/wq_rs?charset=utf8')
+engine = create_engine('mysql+pymysql://root:zhang1988@DESKTOP-4OCI2MF/wq_rs?charset=utf8')
 
 #new_loop = asyncio.new_event_loop()
 #asyncio.set_event_loop(new_loop)
@@ -19,7 +19,7 @@ if uploaded_file is not None:
     df1.to_sql(name=str(uploaded_file.name).replace(".xls",""), con=engine, chunksize=1000, if_exists='replace', index=None)
     st.success("上传成功！")
     
-    db = pymysql.connect(host="10.130.210.142", user="root", password="zhang1988", database="wq_rs", charset="utf8")
+    db = pymysql.connect(host="DESKTOP-4OCI2MF", user="root", password="zhang1988", database="wq_rs", charset="utf8")
     sql="select * from "+str(uploaded_file.name).replace(".xls","")
     cursor = db.cursor()
     cursor.execute(sql)
