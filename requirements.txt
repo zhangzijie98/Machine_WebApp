@@ -4,3 +4,4 @@ xlrd
 streamlit-aggrid
 pymysql
 sqlalchemy
+openpyxl
