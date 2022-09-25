@@ -1,1 +1,6 @@
-
+streamlit
+pandas
+xlrd
+streamlit-aggrid
+pymysql
+sqlalchemy
