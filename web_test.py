@@ -5,7 +5,7 @@ from st_aggrid import AgGrid
 import pandas as pd
 import pymysql
 from sqlalchemy import create_engine
-#import inspect
+import inspect
 #import asyncio
 
 engine = create_engine('mysql+pymysql://zhang:Zhang1988@124.71.83.147:3306/wq_rs?charset=utf8')
