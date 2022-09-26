@@ -17,6 +17,7 @@ uploaded_file = st.file_uploader("请选择要上传的xls格式表格！")
 if uploaded_file is not None:
     df1 = pd.read_excel(uploaded_file)
     AgGrid(df1.head(10))
+    print(uploaded_file.name)
     df1.to_sql(name=str(uploaded_file.name).replace(".xls",""), con=engine, chunksize=1000, if_exists='replace', index=False)
     st.success("上传成功！")
     
