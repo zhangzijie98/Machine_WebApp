@@ -20,7 +20,7 @@ if uploaded_file is not None:
     df1.to_sql(name=str(uploaded_file.name).replace(".xls",""), con=engine, chunksize=1000, if_exists='replace', index=None)
     st.success("上传成功！")
     
-    db = pymysql.connect(host="124.71.83.147", port="3306",user="zhang", password="Zhang1988", database="wq_rs", charset="utf8")
+    db = pymysql.connect(host="124.71.83.147", port=3306,user="zhang", password="Zhang1988", database="wq_rs", charset="utf8")
     sql="select * from "+str(uploaded_file.name).replace(".xls","")
     cursor = db.cursor()
     cursor.execute(sql)
